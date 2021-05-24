@@ -24,9 +24,6 @@ urlpatterns	=	[
                 path('cart/',	include('cart.urls',	namespace='cart')),
                 path('orders/',	include('orders.urls',	namespace='orders')),
 				path('',include('shop.urls',namespace='shop')),
-
-                url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-                url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 if	settings.DEBUG:
 
